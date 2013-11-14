@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Nonlinear elasticity demo</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Nonlinear elasticity demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
 
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    </head>
-    <body>
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/codemirror.css">
+    <link rel="stylesheet" href="css/main.css">
 
-      <div class="container">
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  </head>
 
-	<h1>Nonlinear elasticity in 3D</h1>
+  <body>
 
-	<hr>
+    <div class="container">
+      <h1>Nonlinear elasticity in 3D</h1>
+      <hr>
+      <div class="row">
+	<!-- Input -->
+	<div class="col-md-6">
+	  <div class="panel panel-default">
+	    <div class="panel-heading">Code input</div>
+	    <div class="panel-body">
+	      <div id="code-input">
+		<form role="form" class="form ajax" action="https://thinkbot.net/api/v1/jobs/" method="post">
+		  <fieldset>
+		    <label for="name" class="first">Job name</label>
+		    <input class="form-control" id="name" name="name" value="Stretching a rubber cube" type="text">
 
-	<div class="row">
-	  <!-- Input -->
-	  <div class="col-md-6">
-	    <div class="panel panel-default">
-	      <div class="panel-heading">Code input</div>
-	      <div class="panel-body">
-		<div id="code-input">
-		  <form role="form" class="form ajax" action="https://thinkbot.net/api/v1/jobs/" method="post">
-		    <fieldset>
-		      <label for="name" class="first">Job name</label>
-		      <input class="form-control" id="name" name="name" value="Stretching a rubber cube" type="text">
+		    <label for="environment">Environment</label>
+		    <select class="form-control" id="environment" name="environment">
+		      <option value="fenics11">The FEniCS Project (1.1)</option>
+		      <option value="octave36">GNU Octave (3.6) &mdash; Not yet live</option>
+		      <option value="python27">Python (2.7) &mdash; Not yet live</option>
+		      <option value="r30">R (3.0) &mdash; Not yet live</option>
+		    </select>
 
-		      <label for="environment">Environment</label>
-		      <select class="form-control" id="environment" name="environment">
-			<option value="fenics11">The FEniCS Project (1.1)</option>
-			<option value="octave36">GNU Octave (3.6) &mdash; Not yet live</option>
-			<option value="python27">Python (2.7) &mdash; Not yet live</option>
-			<option value="r30">R (3.0) &mdash; Not yet live</option>
-		      </select>
-
-		      <label for="code">Input code</label>
-		      <textarea class="form-control" id="codemirror" name="code" rows="10"># This code solves the nonlinear-elasticity problem in 3D
+		    <label for="code">Input code</label>
+		    <textarea class="form-control" id="codemirror" name="code" rows="10"># This code solves the nonlinear-elasticity problem in 3D
 
 from dolfin import *
 
@@ -113,26 +113,33 @@ ffc_options = {"optimize": True, \
 solve(F == 0, u, bcs, J=J,
       form_compiler_parameters=ffc_options)</textarea>
 
-		      <label for="variables">Output variable name</label>
-		      <input class="form-control" id="variables" name="variables" value="u.vtk" type="text">
+		    <label for="variables">Output variable name</label>
+		    <input class="form-control" id="variables" name="variables" value="u.vtk" type="text">
 
-		      <button type="submit" class="btn btn-block btn-primary btn-lg" style="margin-bottom: 0px;">Submit your code!</button>
-		    </fieldset>
-		  </form>
-		</div>
+		    <button type="submit" class="btn btn-block btn-primary btn-lg" style="margin-bottom: 0px;">Submit your code!</button>
+		  </fieldset>
+		</form>
 	      </div>
 	    </div>
 	  </div>
-
-	  <!-- Output -->
-	  <div class="col-md-6">.col-md-6</div>
 	</div>
+
+	<!-- Output -->
+	<div class="col-md-6">.col-md-6</div>
       </div>
+    </div>
 
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
-      <script src="js/vendor/bootstrap.min.js"></script>
-      <script src="js/main.js"></script>
-    </body>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/codemirror.js"></script>
+    <script src="js/vendor/emacs.js"></script>
+    <script src="js/vendor/python.js"></script>
+    <script src="js/vendor/xtk.js"></script>
+
+    <script src="js/codemirror-custom.js"></script>
+    <script src="js/thinkbot-ajax.js"></script>
+  </body>
+
 </html>
