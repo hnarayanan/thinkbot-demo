@@ -29,10 +29,10 @@
 	      <div id="code-input">
 		<form role="form" class="form ajax" action="https://thinkbot.net/api/v1/jobs/" method="post">
 		  <fieldset>
-		    <label for="name" class="first">Job name</label>
+		    <label for="name" class="first">Simulation name</label>
 		    <input class="form-control" id="name" name="name" value="Stretching a rubber cube" type="text">
 		    <input id="environment" name="environment" value="fenics11" type="hidden">
-		    <label for="code">Input code</label>
+		    <label for="code">Input program</label>
 		    <textarea class="form-control" id="codemirror" name="code" rows="10"># This code solves the nonlinear-elasticity problem in 3D
 
 from dolfin import *
@@ -106,7 +106,7 @@ solve(F == 0, u, bcs, J=J,
       form_compiler_parameters=ffc_options)</textarea>
 		    <input id="variables" name="variables" value="u.vtk" type="hidden">
 
-		    <button type="submit" class="btn btn-block btn-primary btn-lg" style="margin-bottom: 0px;">Submit your code!</button>
+		    <button type="submit" class="btn btn-block btn-primary btn-lg" style="margin-bottom: 0px;">Run the simulation!</button>
 		  </fieldset>
 		</form>
 	      </div>
@@ -117,7 +117,7 @@ solve(F == 0, u, bcs, J=J,
 	<!-- Output -->
 	<div class="col-md-6">
 	  <div class="panel panel-default">
-	    <div class="panel-heading">Results</div>
+	    <div class="panel-heading">Results visualisation</div>
 	    <div class="panel-body">
 	      <div id="visualization" class="flex-output"></div>
 	      <div id="jobinfo"></div>
