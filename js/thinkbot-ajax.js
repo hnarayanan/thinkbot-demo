@@ -51,7 +51,7 @@ $(document).ready(function() {
 
 	var tryGetResult = setInterval(function() {
 	    result = getResult(url);
-	    updateResultInfo(result);
+	    // updateResultInfo(result);
 
 	    if (tryCount <= 60 && (result.status === 'submitted' || result.status === 'running')) {
 		tryCount++;
