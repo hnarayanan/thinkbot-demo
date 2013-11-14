@@ -31,15 +31,7 @@
 		  <fieldset>
 		    <label for="name" class="first">Job name</label>
 		    <input class="form-control" id="name" name="name" value="Stretching a rubber cube" type="text">
-
-		    <label for="environment">Environment</label>
-		    <select class="form-control" id="environment" name="environment">
-		      <option value="fenics11">The FEniCS Project (1.1)</option>
-		      <option value="octave36">GNU Octave (3.6) &mdash; Not yet live</option>
-		      <option value="python27">Python (2.7) &mdash; Not yet live</option>
-		      <option value="r30">R (3.0) &mdash; Not yet live</option>
-		    </select>
-
+		    <input id="environment" name="environment" value="fenics11" type="hidden">
 		    <label for="code">Input code</label>
 		    <textarea class="form-control" id="codemirror" name="code" rows="10"># This code solves the nonlinear-elasticity problem in 3D
 
@@ -112,9 +104,7 @@ ffc_options = {"optimize": True, \
 # Solve variational problem
 solve(F == 0, u, bcs, J=J,
       form_compiler_parameters=ffc_options)</textarea>
-
-		    <label for="variables">Output variable name</label>
-		    <input class="form-control" id="variables" name="variables" value="u.vtk" type="text">
+		    <input id="variables" name="variables" value="u.vtk" type="hidden">
 
 		    <button type="submit" class="btn btn-block btn-primary btn-lg" style="margin-bottom: 0px;">Submit your code!</button>
 		  </fieldset>
