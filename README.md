@@ -1,7 +1,7 @@
-## Browser-based access to the thinkbot compute service
+## Browser-based access to the thinkbot
 
-This directory tree contains an example of how to access the
-thinkbot's RESTful API (https://thinkbot.net/) via AJAX.
+This directory tree contains an example of how to access the [thinkbot
+scientific computing service](https://thinkbot.net/) via AJAX.
 
 ## Installation
 
@@ -15,7 +15,7 @@ your browser to play with it!
 
 ## API Reference
 
-For more details on using thinkbot's compute API, please go read the
+For more details on using thinkbot's compute API, please read the
 [official documentation](https://thinkbot.net/docs/).
 
 ## Copyright and license
