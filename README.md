@@ -6,7 +6,7 @@ scientific computing service](https://thinkbot.net/) via AJAX.
 ## Installation
 
 The easiest way to run this demo is to download this code, navigate to
-the folder with it and first start the inbuilt Python HTTP server.
+the folder with it, and first start the inbuilt Python HTTP server.
 
     python -m SimpleHTTPServer
 
@@ -40,5 +40,3 @@ own licenses. These files are found under the ``css/vendor`` and
 * CodeMirror, licensed under the MIT license.
 * jQuery, licensed under the MIT license.
 * The X Toolkit (XTK), licensed under the MIT license.
-
-
