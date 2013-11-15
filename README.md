@@ -15,8 +15,17 @@ your browser to play with it!
 
 ## API Reference
 
-For more details on using thinkbot's compute API, please read the
-[official documentation](https://thinkbot.net/docs/).
+For more details on using thinkbot's compute API, please [read the
+official documentation](https://thinkbot.net/docs/).
+
+For more details on nonlinear elasticity and its computational
+implementation in general, please [read a related book
+chapter](http://harishnarayanan.org/files/papers/computational-framework-for-nonlinear-elasticity.pdf).
+
+For more details on the specific example embedded in the source,
+please [read the
+documentation](http://fenicsproject.org/documentation/dolfin/1.2.0/python/demo/pde/hyperelasticity/python/documentation.html)
+on the website of the FEniCS Project.
 
 ## Copyright and license
 
