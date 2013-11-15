@@ -48,10 +48,4 @@ label.first {
     border: 1px solid #cccccc;
     border-radius: 4px;
     height: 300px;
-
-}
-
-.CodeMirror-scroll {
-    overflow-y: hidden;
-    overflow-x: auto;
 }
